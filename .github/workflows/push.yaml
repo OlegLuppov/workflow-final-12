@@ -2,7 +2,7 @@ name: parcel-pipeline
 on: push
 
 jobs:
-  # Run tests
+  # Run task tests
   tests:
     runs-on: ubuntu-latest
     container: golang:1.23.0
@@ -16,7 +16,7 @@ jobs:
       - name: Run Unit Tests
         run: GOOS=linux GOARCH=amd64 go test
   
-
+# Run task deploy to Docker Hub
   deploy:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
