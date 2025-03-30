@@ -14,7 +14,7 @@ jobs:
           go vet ./...
 
       - name: Run Unit Tests
-        run: GOOS=linux GOARCH=amd64 go test
+        run: GOOS=linux GOARCH=amd64 go test ./...
   
 # Run task deploy to Docker Hub
   deploy:
